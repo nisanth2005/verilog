@@ -7,3 +7,19 @@ module decoder(
   assign y2=en&a&~b;
   assign y3=en&a&b;
 endmodule
+
+
+        //or
+
+module decoder(
+  input en,a,b,
+  output[3:0] y
+);
+  assign y[0]= en&~a&~b,y[1]=en&~a&b, y[2]=en&a&~b,y[3]=en&a&b;
+endmodule
+
+
+
+
+
+
